@@ -42,3 +42,24 @@ test("clicking on button increments counter display",()=>{
   expect(count).toBe("1")
 })
 
+test("renders decrement btn",() => {
+  const wrapper = setup()
+  const decrement = findByTestAttr(wrapper,"decrement")
+  expect(decrement.length).toBe(1)
+})
+
+test("clicking on button decrements counter display",() => {
+  const wrapper = setup()
+  const decrement = findByTestAttr(wrapper,"decrement")
+  decrement.simulate('click')
+  const count = findByTestAttr(wrapper,"count").text()
+
+  expect(count).toBe("-1")
+})
+
+// test("is error shown",() => {
+//   const wrapper = setup()
+//   const msg = findByTestAttr(wrapper,"msg")
+//   const check = msg.hasClass('hidden')
+//   expect(check).toBe(true)
+// })
