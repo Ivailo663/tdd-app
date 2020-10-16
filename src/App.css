@@ -2,9 +2,9 @@
   text-align: center;
 }
 
-.msg{
-  color:red;
+.error {
+  color: red;
 }
-.hidden{
-  display:none
+.hidden {
+  display: none;
 }
