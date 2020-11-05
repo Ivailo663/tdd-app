@@ -4,6 +4,7 @@ import { getLetterMatchCount } from "../helpers";
 
 export const actionTypes = {
   CORRECT_GUESS: "CORRECT_GUESS",
+<<<<<<< HEAD
   GUESS_WORD: "GUESS_WORD",
   SET_SECRET_WORD: "SET_SECRET_WORD",
 };
@@ -28,3 +29,12 @@ export const getSecretWord = () => {
     axios.get("http://localhost:3030");
   };
 };
+=======
+};
+
+export function correctGuess() {
+  return {
+    type: actionTypes.CORRECT_GUESS,
+  };
+}
+>>>>>>> parent of 93dbc3e... redux-thunk
