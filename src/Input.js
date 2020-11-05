@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { correctGuess } from "./actions";
+import { guessWord } from "./actions";
 
 class Input extends Component {
   componentDidMount() {
@@ -24,6 +24,6 @@ const mapStateToProps = ({ success }) => {
   };
 };
 const actionsCreator = {
-  check: correctGuess,
+  guessWord,
 };
 export default connect(mapStateToProps, actionsCreator)(Input);

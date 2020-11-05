@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import { connect } from "react-redux";
 import "./App.css";
 import Congrats from "./Congrats";
 import GuessedWords from "./GuessedWords";
 import Input from "./Input";
+import { getSecretWord } from "./actions";
 class App extends Component {
   render() {
     return (
@@ -16,5 +17,8 @@ class App extends Component {
     );
   }
 }
-
-export default App;
+const mapStateToProps = (state) => {
+  const { success, guessedWords, secretWord } = state;
+  return { success, guessedWords, secretWord };
+};
+export default connect(mapStateToProps, { getSecretWord })(App);
